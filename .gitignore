@@ -301,3 +301,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+src/Buzz/Properties/launchSettings.json
+src/Buzz/Properties/PublishProfiles/BuzzWeb-publish.ps1

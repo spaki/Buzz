@@ -11,14 +11,16 @@ namespace Buzz
     {
         public static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
+            var hostBuilder = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
-                .UseStartup<Startup>()
-                .Build();
+                .UseStartup<Startup>();
 
-            host.Run();
+            if (args != null && args.Length > 0)
+                hostBuilder = hostBuilder.UseUrls(args);
+
+            hostBuilder.Build().Run();
         }
     }
 }

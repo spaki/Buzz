@@ -31,10 +31,11 @@
                 <a asp-controller="Home" asp-action="Index" class="navbar-brand" style="background-color: white; margin-right:10px;">
                     <img src="~/Images/bee.png" style="margin-top: -5px;">
                 </a>
-                <a asp-controller="Home" asp-action="Index" class="navbar-brand">Buzz</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Buzz</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                 </ul>
             </div>
         </div>

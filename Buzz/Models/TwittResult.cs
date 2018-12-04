@@ -18,7 +18,7 @@ namespace Buzz.Models
         {
             get
             {
-                return WebUtility.UrlDecode(Query).Replace("#", " #");
+                return WebUtility.UrlDecode(Query ?? string.Empty).Replace("#", " #");
             }
         }
     }

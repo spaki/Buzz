@@ -1,0 +1,6 @@
+﻿// add routing from physical network adpter to virtual (hyper-v) network adapter
+// example: netsh interface portproxy add v4tov4 listenport=5000 listenaddress=192.168.0.76 connectport=5000 connectaddress=172.24.55.105
+netsh interface portproxy add v4tov4 listenport=5000 listenaddress=<ip> connectport=5000 connectaddress=172.24.55.105
+
+// run at any network adapter interface 
+dotnet run -- urls http://0.0.0.0:5000
